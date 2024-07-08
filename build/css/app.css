@@ -320,17 +320,19 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  background-color: #ebe7de;
 }
 
 p {
   color: rgb(0, 0, 0);
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
 }
 
 .contenedor {
   width: 95%;
   max-width: 120rem;
-  margin: auto 0;
+  margin: 0 auto;
 }
 
 a {
@@ -342,8 +344,17 @@ img {
   display: block;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 h1, h2, h3 {
+  font-family: "Raleway", sans-serif;
   margin: 0 0 5rem 0;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 h1 {
@@ -352,6 +363,21 @@ h1 {
 
 h2 {
   font-size: 3.6rem;
+  color: #5E311E;
+}
+h2 span {
+  color: #C39663;
+  font-size: 1.8rem;
+  display: block;
+}
+h2::after { /* centrar y mostrar grano de cafe */
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  background-image: url(../img/cafe.svg);
+  background-size: 10rem;
 }
 
 h3 {
@@ -457,5 +483,35 @@ h3 {
   .barra .logo {
     width: 20rem;
     margin: 0;
+  }
+}
+
+.contenido-principal {
+  background-color: white;
+  padding: 5rem 2rem;
+}
+@media (min-width: 720px) {
+  .contenido-principal {
+    padding: 10rem;
+    margin-top: -10rem;
+    position: relative;
+  }
+}
+
+.iconos {
+  margin-top: 5rem;
+}
+.iconos .listado-iconos img {
+  margin: 0 auto;
+}
+.iconos .listado-iconos p {
+  font-family: "Bona Nova", serif;
+}
+@media (min-width: 720px) {
+  .iconos .listado-iconos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
   }
 }

@@ -22,3 +22,14 @@
         @content;
     }
 }
+
+@mixin grid($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    column-gap: $espaciado;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+}
