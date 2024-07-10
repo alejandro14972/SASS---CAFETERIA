@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    font-family: v.$fuenteSecundartia;
+    font-family: v.$fuentesecundaria;
     font-size: 1.6rem;
     background-color: v.$cafeClaro;
 }
@@ -22,7 +22,7 @@ p{
 }
 
 .contenedor{
-    width: 95%;
+    width: 95%; /* bajar porcentaje a un 85% */
     max-width: 120rem;
     margin:0 auto;
 }
