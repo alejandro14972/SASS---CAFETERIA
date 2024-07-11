@@ -12,15 +12,21 @@
   "author": "Alejandro",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
     "autoprefixer": "^10.4.19",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
     "gulp": "^4.0.2",
     "gulp-avif": "^1.0.1",
+    "gulp-babel": "^8.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-webp": "^4.0.1",
     "postcss": "^8.4.39",
     "sass": "^1.77.6",
-    "through2": "^4.0.2"
+    "through2": "^4.0.2",
+    "vinyl-source-stream": "^2.0.0"
   }
 }

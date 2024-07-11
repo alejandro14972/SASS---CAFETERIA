@@ -7,6 +7,18 @@
         padding: 10rem;
     }
 
+    .testimoniales-dinamico{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 1rem;
+        @include m.tablet { 
+          
+          grid-template-columns: repeat(3, 1fr);
+          row-gap: 1rem;
+        }
+        
+    }
+
     .testimonial{
         background-color: v.$cafeClaro;
         padding: 2rem 4rem;
@@ -14,7 +26,8 @@
         margin: 0 auto;
         border-radius: 1rem;
         @include m.tablet { 
-            width: 50%;
+            //width: 50%;
+            
         }
         p{
             font-size: 1rem;
