@@ -330,9 +330,15 @@ p {
 }
 
 .contenedor {
-  width: 85%; /* bajar porcentaje a un 85% */
+  width: 95%;
+  /* bajar porcentaje a un 85% original 95%*/
   max-width: 120rem;
   margin: 0 auto;
+}
+@media (min-width: 720px) {
+  .contenedor {
+    width: 75%;
+  }
 }
 
 a {
