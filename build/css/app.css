@@ -330,7 +330,7 @@ p {
 }
 
 .contenedor {
-  width: 95%; /* bajar porcentaje a un 85% */
+  width: 85%; /* bajar porcentaje a un 85% */
   max-width: 120rem;
   margin: 0 auto;
 }
@@ -739,8 +739,14 @@ h3 {
 .footer-box h3 {
   font-family: "Bona Nova", serif;
   margin: 0 0 1rem 0;
-  font-size: 2.4rem;
+  font-size: 1.7rem;
+  text-align: center;
   color: #C39663;
+}
+@media (min-width: 720px) {
+  .footer-box h3 {
+    font-size: 2.3rem;
+  }
 }
 .footer-box p, .footer-box a {
   font-size: 2rem;
