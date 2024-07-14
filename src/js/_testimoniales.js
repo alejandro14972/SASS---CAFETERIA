@@ -18,7 +18,7 @@ let citas = [
 ];
 
 //import {citas as citas} from './citas/citas'
-console.log(citas);
+//console.log(citas);
 export function testimoniales() {
 
     const testimonialContainer = document.querySelector('.testimoniales-dinamico');
@@ -26,7 +26,7 @@ export function testimoniales() {
 
     for (let i = 0; i < citas.length; i++) {
         let cita = citas[i];
-        console.log(cita);
+        //console.log(cita);
         let testimonialItem = document.createElement('div');
         testimonialItem.classList.add('testimonial');
         testimonialItem.innerHTML = `
