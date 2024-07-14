@@ -1,7 +1,23 @@
 /* import { citas } from './citas/testimonios.js';
 console.log("mis citas");
 console.log(citas); */
-import {citas as citas} from './citas/citas'
+
+let citas = [
+    {
+      'autor': 'Albert Einstein',
+      'texto': 'No poseo talentos especiales. Solo soy apasionadamente curioso.'
+    },
+    {
+      'autor': 'Anónimo',
+      'texto': 'Semanas de programación te pueden ahorrar horas de planeación.'
+    },
+    {
+      'autor': 'Alan Kay',
+      'texto': 'La mejor forma de predecir el futuro es inventarlo.'
+    }
+];
+
+//import {citas as citas} from './citas/citas'
 console.log(citas);
 export function testimoniales() {
 
