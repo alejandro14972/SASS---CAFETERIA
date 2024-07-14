@@ -330,13 +330,20 @@ p {
 }
 
 .contenedor {
-  width: 95%; /* bajar porcentaje a un 85% */
+  width: 95%;
+  /* bajar porcentaje a un 85% original 95%*/
   max-width: 120rem;
   margin: 0 auto;
+}
+@media (min-width: 720px) {
+  .contenedor {
+    width: 75%;
+  }
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 img {
@@ -362,7 +369,7 @@ h1 {
 }
 
 h2, .heading-blanco {
-  font-size: 3.6rem;
+  font-size: 3.4rem;
   color: #5E311E;
 }
 h2 span, .heading-blanco span {
@@ -710,4 +717,50 @@ h3 {
   font-size: 2rem;
   color: #5E311E;
   font-family: "Bona Nova", serif;
+}
+
+.footer {
+  background-color: #5E311E;
+}
+.footer .contenido-footer {
+  padding: 5rem;
+}
+@media (min-width: 720px) {
+  .footer .contenido-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+.footer .copyright {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.footer-box {
+  font-family: "Bona Nova", serif;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+@media (min-width: 720px) {
+  .footer-box {
+    margin-bottom: 0;
+  }
+}
+.footer-box h3 {
+  font-family: "Bona Nova", serif;
+  margin: 0 0 1rem 0;
+  font-size: 1.7rem;
+  text-align: center;
+  color: #C39663;
+}
+@media (min-width: 720px) {
+  .footer-box h3 {
+    font-size: 2.3rem;
+  }
+}
+.footer-box p, .footer-box a {
+  font-size: 2rem;
+  margin: 0;
 }
