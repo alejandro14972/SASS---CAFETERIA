@@ -686,17 +686,23 @@ h3 {
     padding: 10rem;
   }
 }
+.nuestros-testimoniales .testimoniales-dinamico {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 1rem;
+}
+@media (min-width: 720px) {
+  .nuestros-testimoniales .testimoniales-dinamico {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+  }
+}
 .nuestros-testimoniales .testimonial {
   background-color: #ebe7de;
   padding: 2rem 4rem;
   width: 95%;
   margin: 0 auto;
   border-radius: 1rem;
-}
-@media (min-width: 720px) {
-  .nuestros-testimoniales .testimonial {
-    width: 50%;
-  }
 }
 .nuestros-testimoniales .testimonial p {
   font-size: 1rem;

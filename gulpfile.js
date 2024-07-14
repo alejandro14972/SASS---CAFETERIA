@@ -11,6 +11,14 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 
+//babel para js
+const babel = require('gulp-babel');
+
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const babelify = require('babelify');
+
+
 function css(done) {
 
   src('src/scss/app.scss')
@@ -46,9 +54,21 @@ function imagenesWebp() {
       .pipe(dest('build/img'));
 } 
 
+
+//precopilador js
+function bundleJavaScript() {
+  return browserify({ entries: 'src/js/index.js', debug: true })
+      .transform(babelify, { presets: ['@babel/preset-env'] })
+      .bundle()
+      .pipe(source('index.js'))
+      .pipe(dest('build/js'));
+}
+
+
 function dev() { //funcion para actualizar automático
   console.log("desplegando pagina web");
   watch('src/scss/**/*.scss', css);
+  watch('src/js/index.js', bundleJavaScript)
   watch('src/img/**/*', imagenes);
 }
 
@@ -57,4 +77,6 @@ exports.dev = dev;
 exports.imagenes = imagenes;
 exports.imagenesWebp = imagenesWebp;
 exports.versionAvif = versionAvif;
-exports.default = series (/* imagenes, imagenesWebp, versionAvif, */ css, dev);
+exports.bundleJavaScript = bundleJavaScript;
+//exports.js = javascript
+exports.default = series (/* imagenes, imagenesWebp, versionAvif, */ css,bundleJavaScript ,dev);
