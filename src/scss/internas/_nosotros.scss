@@ -1,0 +1,26 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.contenido-nosotros{
+    @include m.tablet { 
+        @include m.grid(2, 2rem);
+    }
+    .imagen{
+        @include m.tablet { 
+            margin: 0 2rem 0 0;
+        }
+        img{
+            transform: rotate(-6deg);
+            border: 3rem solid white;
+            box-shadow: 9px 10px 5px -7px rgb(0 0 0/.35);
+        }
+    }
+
+    .texto{
+        blockquote{
+            margin: 0;
+            padding: 2rem;
+            border-left: .5rem solid v.$primario;
+        }
+    }
+}

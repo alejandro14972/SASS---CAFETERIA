@@ -77,6 +77,6 @@ exports.dev = dev;
 exports.imagenes = imagenes;
 exports.imagenesWebp = imagenesWebp;
 exports.versionAvif = versionAvif;
-exports.bundleJavaScript = bundleJavaScript;
-//exports.js = javascript
-exports.default = series (/* imagenes, imagenesWebp, versionAvif, */ css,bundleJavaScript ,dev);
+
+exports.default = series (imagenes, imagenesWebp, versionAvif, css, dev);
+
