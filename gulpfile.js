@@ -57,4 +57,4 @@ exports.dev = dev;
 exports.imagenes = imagenes;
 exports.imagenesWebp = imagenesWebp;
 exports.versionAvif = versionAvif;
-exports.default = series (/* imagenes, imagenesWebp, versionAvif, */ css, dev);
+exports.default = series (imagenes, imagenesWebp, versionAvif, css, dev);
